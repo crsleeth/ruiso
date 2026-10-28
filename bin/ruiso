@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+"""Run ruiso straight from a checkout (also works through a symlink in your PATH)."""
+import os
+import sys
+
+if sys.version_info < (3, 8):
+    sys.exit("ruiso needs Python 3.8 or newer")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+
+from ruiso.cli import main  # noqa: E402
+
+sys.exit(main())

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ruiso"
+dynamic = ["version"]
+description = "Rufus' Windows User Experience options for Windows ISOs, written to a new ISO (macOS/Linux)"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+requires-python = ">=3.8"
+classifiers = [
+    "Environment :: Console :: Curses",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+ruiso = "ruiso.cli:main"
+
+[tool.setuptools]
+packages = ["ruiso"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ruiso.__version__" }
