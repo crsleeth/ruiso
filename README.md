@@ -1,10 +1,21 @@
 # ruiso
 
-Status: all 9 options verified with a full Windows 11 install in a VM | Next: test `-c` on a PC that enforces the 2023 Secure Boot certificate
-
 [Rufus](https://rufus.ie)' "Windows User Experience" options (skip the TPM and Microsoft
 account checks, create a local user, and so on), applied to a Windows 10/11 ISO and
 written to a new bootable ISO. Use the Rufus-style TUI or one command.
+
+## Why
+
+Rufus only applies these options while writing a USB drive, and only runs on Windows.
+`ruiso` runs anywhere Python does and gives you the same result as an ISO file, so you
+can:
+
+- Install Windows 11 in a VM (UTM, Parallels, VMware, VirtualBox, Proxmox, Hyper-V)
+  without a virtual TPM, Secure Boot or 4 GB of RAM, and without a Microsoft account.
+- Drop the ISO on a Ventoy drive, or write it with any USB tool, and still get Rufus'
+  tweaks.
+- Keep one ready-made ISO for repeat installs instead of clicking through setup each
+  time.
 
 ## Install
 
