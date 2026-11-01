@@ -19,11 +19,15 @@ can:
 
 ## Install
 
-Needs Python 3.8+ and nothing else. From a clone of this repo:
+Needs Python 3.8+ and nothing else. From the downloaded or cloned folder:
 
 ```bash
 ./install.sh
 ```
+
+This copies ruiso to `~/.local/share/ruiso` and adds the `ruiso` command to
+`~/.local/bin`, so the download can be deleted afterwards. Run it again from a newer
+download to update, or run `~/.local/share/ruiso/uninstall.sh` to remove it.
 
 The `-c` option also needs wimlib or 7-Zip to read `boot.wim`.
 
